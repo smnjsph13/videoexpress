@@ -3,10 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        Vidly
+    <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex flex-row justify-content-between">
+      <Link className="navbar-brand ml-5" to="/">
+        VideoXpress
       </Link>
+      <div className="d-flex flex-row mr-5">
       <button
         className="navbar-toggler"
         type="button"
@@ -50,6 +51,8 @@ const NavBar = ({ user }) => {
             </React.Fragment>
           )}
         </div>
+      </div>
+
       </div>
     </nav>
   );
