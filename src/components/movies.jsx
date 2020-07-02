@@ -106,6 +106,7 @@ class Movies extends Component {
       <div className="row">
         <div className="col-3">
           <ListGroup
+            className = "list-group-item list-group-item-action list-group-item-primary"
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}

@@ -27,7 +27,7 @@ class TableHeader extends Component {
   render() {
     return (
       <thead>
-        <tr>
+        <tr className = "table-secondary">
           {this.props.columns.map((column) => (
             <th
               className="clickable"

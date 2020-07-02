@@ -16,7 +16,7 @@ class TableBody extends Component {
     const { data, columns } = this.props;
 
     return (
-      <tbody>
+      <tbody className = "bg-light">
         {data.map((item) => (
           <tr key={item._id}>
             {columns.map((column) => (

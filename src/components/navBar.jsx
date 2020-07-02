@@ -3,13 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark d-flex flex-row justify-content-between">
-      <Link className="navbar-brand ml-5" to="/"
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark d-flex flex-row justify-content-between">
+      <Link className="navbar-brand" to="/"
       >
         <img width="42px" height ="42px" src = "https://cdn2.iconfinder.com/data/icons/famous-logos-in-orange/512/logo_orange_Youtube-512.png" alt=""></img>
         Video<span style={{ color: 'orange', fontSize: 25 }}>X</span>press
       </Link>
-      <div className="d-flex flex-row mr-5">
+      <div className="d-flex flex-row">
         <button
           className="navbar-toggler"
           type="button"
