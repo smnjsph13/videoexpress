@@ -5,6 +5,7 @@ import Movies from "./components/movies";
 import MovieForm from "./components/movieForm";
 import Customers from "./components/customers";
 import Rentals from "./components/rentals";
+import Profile from "./components/profile";
 import NotFound from "./components/notFound";
 import NavBar from "./components/navBar";
 import LoginForm from "./components/loginForm";
@@ -16,7 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 class App extends Component {
-  state = {};
+  state = {
+  };
 
   componentDidMount() {
     const user = auth.getCurrentUser();
@@ -25,7 +27,7 @@ class App extends Component {
 
   render() {
     const { user } = this.state;
-
+    console.log("here", user)
     return (
       <React.Fragment>
         <ToastContainer />
@@ -42,7 +44,12 @@ class App extends Component {
             />
             <Route path="/customers" component={Customers} />
             <Route path="/rentals" component={Rentals} />
-            <Route path="/not-found" component={NotFound} />
+            {/* <Route path="/profile" component={Profile} /> */}
+            <Route
+              path="/profile"
+              render={props => <Profile {...props} user={user} />}
+            />
+            <Route path="/not-found" component={NotFound} lala = {user}/>
             <Redirect from="/" exact to="/movies" />
             <Redirect to="/not-found" />
           </Switch>

@@ -51,8 +51,16 @@ class MovieForm extends Form {
   }
 
   async componentDidMount() {
+    console.log("did mount")
+
     await this.populateGenres();
     await this.populateMovie();
+  }
+  async componentDidUpdate() {
+    console.log("did update")
+  }
+  async componentWillUnmount() {
+    console.log("will unmount")
   }
 
   mapToViewModel(movie) {
